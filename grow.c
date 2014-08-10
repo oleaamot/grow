@@ -49,7 +49,7 @@ int main(int argc, char *argv[])
 		return (0);
 	} else {
 		fprintf(stdout, "%s %s\n", PACKAGE, VERSION);
-		fprintf(stdout, "Copyright (C) 2012 Ole Aamot\n\n");
+		fprintf(stdout, "Copyright (C) 2012-2014 Ole Aamot\n\n");
 		fprintf(stdout, "Usage: %s FILE BYTESIZE\n", PACKAGE);
 	}
 	return (0);
