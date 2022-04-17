@@ -10,8 +10,12 @@ int main(int argc, char *argv[])
 	long filepos = 0;
 	long lastpos = 0;
 	unsigned int usecs = 1000;
-	if (argc > 1) {
+	if (argc > 2) {
 		fileno = fopen(argv[1], "r");
+		if (fileno == 0) {
+			fprintf(stderr, "%s does not exist\n", argv[1]);
+			return 1;
+		}
 		fseek(fileno, 1, SEEK_END);
 		filepos = ftell(fileno);
 		fprintf(stdout, "%s is %li bytes\n", argv[1], filepos - 1);
